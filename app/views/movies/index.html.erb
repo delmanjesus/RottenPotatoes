@@ -1,0 +1,18 @@
+<h2>Todos os Filmes</h2>
+
+<table border="1">
+  <tr>
+    <th>Título</th>
+    <th>Classificação</th>
+    <th>Ações</th>
+  </tr>
+  <% @filmes.each do |filme| %>
+    <tr>
+      <td><%= filme.title %></td>
+      <td><%= filme.rating %></td>
+      <td><%= link_to 'Ver', movie_path(filme) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Novo Filme', new_movie_path %>

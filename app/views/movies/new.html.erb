@@ -1,0 +1,9 @@
+<h2>Novo Filme</h2>
+
+<%= form_with model: @filme, local: true do |form| %>
+  Título: <%= form.text_field :title %><br>
+  Classificação: <%= form.text_field :rating %><br>
+  <%= form.submit 'Salvar' %>
+<% end %>
+
+<%= link_to 'Voltar', movies_path %>
